@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body {
+    height: 100vh;
+} */
+
+/* Main Section */
+section {
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+section button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background: rgb(140, 139, 139);
+    transition: background 0.5s ease-out;
+}
+section button:hover {
+    background: rgb(0, 52, 164);
+}
+:root {
+    --anim-duration: 0.5s;
+}
+
+/* Nav */
+nav {
+    min-height: 10vh;
+    background: rgb(40, 40, 40);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--anim-duration) ease-out;
+}
+nav.nav-slide {
+    transform: translateY(-100%);
+}
+nav p {
+    opacity: 1;
+    transition: opacity var(--anim-duration) ease-out var(--anim-duration);
+}
+nav p.fade {
+    opacity: 0;
+}
+
+/* Cookie Popup */
+.cookie-container {
+    background: linear-gradient(260deg, #9b6c50 0%, #4f2626 100%);
+    position: absolute; 
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    height: 11rem;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    font-family: "Poppins", "sans-serif";
+    overflow: hidden;
+}
+.text {
+    width: 80%;
+}
+.cookie {
+    transform: scale(0.7);
+    overflow: visible; /* to keep crumbs visible when moving */
+}
+.cookie-title {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: 1.5rem;
+}
+.cookie-subtitle {
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 0.5rem 0rem;
+}
+.cookie-button {
+    border-style: none;
+    padding: 0.5rem 1rem;
+    color: #4f2626;
+    font-family: "Poppins", "sans-serif";
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
